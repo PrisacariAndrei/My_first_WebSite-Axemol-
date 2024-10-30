@@ -1,0 +1,824 @@
+<?php include("rates.php");?>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="./style.css">
+    <script src="./script.js"></script>
+    <!-- <link href="https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap" rel="stylesheet"> -->
+    <title>AXEMOL.com</title>
+
+
+
+</head>
+
+
+
+<body>
+
+
+<!--
+    <svg style ="display: none;">
+        <symbol id = "facebook" viewBox="0 0 24 24">
+            <path d="m15.997 3.985h2.191v-3.816c-.378-.052-1.678-.169-3.192-.169-3.159 0-5.323 1.987-5.323 5.639v3.361h-3.486v4.266h3.486v10.734h4.274v-10.733h3.345l.531-4.266h-3.877v-2.939c.001-1.233.333-2.077 2.051-2.077z"/>
+        </symbol>
+
+        <symbol id = "facebook" viewBox="0 0 24 24">
+            <path d="m12 24c6.629 0 12-5.371 12-12s-5.371-12-12-12-12 5.371-12 12 5.371 12 12 12zm-6.509-12.26 11.57-4.461c.537-.194 1.006.131.832.943l.001-.001-1.97 9.281c-.146.658-.537.818-1.084.508l-3-2.211-1.447 1.394c-.16.16-.295.295-.605.295l.213-3.053 5.56-5.023c.242-.213-.054-.333-.373-.121l-6.871 4.326-2.962-.924c-.643-.204-.657-.643.136-.953z"/>
+        </symbol>
+    </svg>
+-->
+    
+    <!--Header-->
+    <header class="header">
+        <div class="container">
+            <div class="header__inner">
+                <div class="header__logo">Axemol</div>
+
+                <nav class="nav" id="nav">
+                    <div id="compani1" class=" compain nav__link" href = ""> <a class="href" href="index.html">VECTOR-AP</a></div>
+                    <div id="compani2" class=" compain nav__link" href = ""> <a class="href" href="vladix.html">VLADIX-MV</a></div>
+                    <div id="compani3" class=" compain nav__link" href = ""><a class="href" href="maxbemol.html">MAXBEMOL</a></div>
+                    <div id="compani4" class=" compain nav__link" href = ""><a class="href" href="axemol.html">AXEMOL</a></div>
+                    <!-- <a class="nav__link" href="#">Филиал 3</a> -->
+                    <div class="contact nav__link href" id="navToggle">Contacte</div>
+
+                </nav>
+
+                <button class="burger" type="button" id="navT">
+                    <span class = "burger_item"></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+
+        <div class="sidebar">
+                <div class="branch__div">
+                    <ul class = "branch">
+                        <li class = "branch1">Sediu central: <a class="li_adres">Str.Calea Iesilor,16/6</a></li>
+                        <li class = "branch2 ">Sucursala Nr.1: <a class="li_adres">Bd.Stefan Cel Mare Si Sfant,132</a></li>
+                        <li class = "branch3 ">Sucursala Nr.2: <a class="li_adres">Str.V.Lupu,61/5</a></li>
+                        <li class = "branch4 ">Sucursala Nr.3: <a class="li_adres">Str.Albisoara,80/5 A</a></li>
+                        <li class = "branch5 ">Sucursala Nr.4: <a class="li_adres">Or.Durlesti,str.T.Vladimirescu,66</a></li>
+                        <li class = "branch6 ">Sucursala Nr.5: <a class="li_adres">Bd.Moscova,11/5</a></li>
+                        <li class = "branch7 ">Sucursala Nr.6: <a class="li_adres">Str.Codrilor,16</a></li>
+                    </ul>
+
+
+                </div>
+           </div>
+
+    <div class="content">
+        <div class="container">
+
+        <div id = "branch1" class="main-content">
+
+            <div class="curs">
+                <div class="container">
+                    <div class="curs__items">
+
+                        <h1 class="curs__title">Vector Ap:  Sediu central</h1>
+                        <p class="adres">Str.Calea Iesilor,16/6</p>
+                        <a class="btn  btn--gray" href="https://goo.gl/maps/eXZuNnutk8RKC1tF6" target="_blank">adresa pe hartă</a>
+                        <p class="update__date">Numar de telefon:  +373 677 34 400</p>
+
+                        <table class="main__container main__container1" id="first">
+                            <tr class="text__div">
+                                <th>
+                                    <p class="text">Buy</p>
+                                </th>
+                                <th>
+                                    <p class="Currency_text">Currency</p>
+                                </th>
+                                <th>
+                                    <p class="text">Sell</p>
+                                </th>
+                            </tr>
+
+                            <tr class="currencies">
+                                <td>
+                                    <p class="block">00.00<?php echo get_num("vectorap","sediucentral","usd","buy");?></p>
+                                </td>
+                                <td><img src="./assets/icons/united-states.png" alt="" class="icon"></td>
+                                <td>
+                                    <p class="block2">00.00<?php echo get_num("vectorap","sediucentral","usd","sell");?></p>
+                                </td>
+                            </tr>
+
+                            <tr class="currencies">
+                                <td>
+                                    <p class="block">00.00<?php echo get_num("vectorap","sediucentral","eur","buy");?></p>
+                                </td>
+                                <td><img src="./assets/icons/eu_flag.png" alt="" class="icon"></td>
+                                <td>
+                                    <p class="block2">00.00<?php echo get_num("vectorap","sediucentral","eur","sell");?></p>
+                                </td>
+                            </tr>
+
+                            <tr class="currencies">
+                                <td>
+                                    <p class="block">00.00<?php echo get_num("vectorap","sediucentral","rub","buy");?></p>
+                                </td>
+                                <td><img src="./assets/icons/russia-flag.png" alt="" class="icon"></td>
+                                <td>
+                                    <p class="block2">00.00<?php echo get_num("vectorap","sediucentral","rub","sell");?></p>
+                                </td>
+                            </tr>
+
+                            <tr class="currencies">
+                                <td>
+                                    <p class="block">00.00<?php echo get_num("vectorap","sediucentral","ron","buy");?></p>
+                                </td>
+                                <td><img src="./assets/icons/romania-flag.png" alt="" class="icon"></td>
+                                <td>
+                                    <p class="block2">00.00<?php echo get_num("vectorap","sediucentral","ron","sell");?></p>
+                                </td>
+                            </tr>
+
+                            <tr class="currencies">
+                                <td>
+                                    <p class="block">00.00<?php echo get_num("vectorap","sediucentral","uah","buy");?></p>
+                                </td>
+                                <td><img src="./assets/icons/ukraine-flag.png" alt="" class="icon"></td>
+                                <td>
+                                    <p class="block2">00.00<?php echo get_num("vectorap","sediucentral","uah","sell");?></p>
+                                </td>
+                            </tr>
+
+                            <tr class="currencies">
+                                <td>
+                                    <p class="block">00.00<?php echo get_num("vectorap","sediucentral","gbp","buy");?></p>
+                                </td>
+                                <td><img src="./assets/icons/united-kingdom.png" alt="" class="icon"></td>
+                                <td>
+                                    <p class="block2">00.00<?php echo get_num("vectorap","sediucentral","gbp","sell");?></p>
+                                </td>
+                            </tr>
+                            <tr class="currencies_button cb1">
+                                <td><a class="btn2 b1 btn--gray">All currencies</a></td>
+                            </tr>
+                        </table>
+                    </div>
+                 </div>
+            </div>
+        </div>
+     </div>
+</div>
+
+
+<div class="content">
+        <!-- sidebar branches start -->
+        <div class="container">
+
+
+
+        <!-- sidebar branches end -->
+
+        <div id="branch2" class="main-content">
+
+            <div class="curs">
+                <div class="container">
+                    <div class="curs__items">
+
+                        <h1 class="curs__title">Vector Ap:  Sucursala Nr.1</h1>
+                        <p class="adres">Bd.Stefan Cel Mare Si Sfant,132</p>
+                        <a class="btn  btn--gray" href="https://goo.gl/maps/hdAQCk7tEmpMwRYR9" target="_blank">adresa pe hartă</a>
+                        <p class="update__date">Numar de telefon:  +373 674 93 311</p>
+
+                        <table class="main__container main__container2" id="first">
+                            <tr class="text__div">
+                                <th>
+                                    <p class="text">Buy</p>
+                                </th>
+                                <th>
+                                    <p class="Currency_text">Currency</p>
+                                </th>
+                                <th>
+                                    <p class="text">Sell</p>
+                                </th>
+                            </tr>
+
+                            <tr class="currencies">
+                                <td>
+                                    <p class="block">00.00<?php echo get_num("vectorap","sucursalanr1","usd","buy");?></p>
+                                </td>
+                                <td><img src="./assets/icons/united-states.png" alt="" class="icon"></td>
+                                <td>
+                                    <p class="block2">00.00<?php echo get_num("vectorap","sucursalanr1","usd","sell");?></p>
+                                </td>
+                            </tr>
+
+                            <tr class="currencies">
+                                <td>
+                                    <p class="block">00.00<?php echo get_num("vectorap","sucursalanr1","eur","buy");?></p>
+                                </td>
+                                <td><img src="./assets/icons/eu_flag.png" alt="" class="icon"></td>
+                                <td>
+                                    <p class="block2">00.00<?php echo get_num("vectorap","sucursalanr1","eur","sell");?></p>
+                                </td>
+                            </tr>
+
+                            <tr class="currencies">
+                                <td>
+                                    <p class="block">00.00<?php echo get_num("vectorap","sucursalanr1","rub","buy");?></p>
+                                </td>
+                                <td><img src="./assets/icons/russia-flag.png" alt="" class="icon"></td>
+                                <td>
+                                    <p class="block2">00.00<?php echo get_num("vectorap","sucursalanr1","rub","sell");?></p>
+                                </td>
+                            </tr>
+
+                            <tr class="currencies">
+                                <td>
+                                    <p class="block">00.00<?php echo get_num("vectorap","sucursalanr1","ron","buy");?></p>
+                                </td>
+                                <td><img src="./assets/icons/romania-flag.png" alt="" class="icon"></td>
+                                <td>
+                                    <p class="block2">00.00<?php echo get_num("vectorap","sucursalanr1","ron","sell");?></p>
+                                </td>
+                            </tr>
+
+                            <tr class="currencies">
+                                <td>
+                                    <p class="block">00.00<?php echo get_num("vectorap","sucursalanr1","uah","buy");?></p>
+                                </td>
+                                <td><img src="./assets/icons/ukraine-flag.png" alt="" class="icon"></td>
+                                <td>
+                                    <p class="block2">00.00<?php echo get_num("vectorap","sucursalanr1","uah","sell");?></p>
+                                </td>
+                            </tr>
+
+                            <tr class="currencies">
+                                <td>
+                                    <p class="block">00.00<?php echo get_num("vectorap","sucursalanr1","gbp","buy");?></p>
+                                </td>
+                                <td><img src="./assets/icons/united-kingdom.png" alt="" class="icon"></td>
+                                <td>
+                                    <p class="block2">00.00<?php echo get_num("vectorap","sucursalanr1","gbp","sell");?></p>
+                                </td>
+                            </tr>
+                            <tr class="currencies_button cb2">
+                                <td><a class="btn2 b2 btn--gray">All currencies</a></td>
+                            </tr>
+                        </table>
+                    </div>
+                 </div>
+            </div>
+        </div>
+     </div>
+</div>
+
+<div class="content">
+        <!-- sidebar branches start -->
+        <div class="container">
+
+
+
+        <!-- sidebar branches end -->
+
+        <div id="branch3" class="main-content">
+
+            <div class="curs">
+                <div class="container">
+                    <div class="curs__items">
+
+                        <h1 class="curs__title">Vector Ap:  Sucursala Nr.2</h1>
+                        <p class="adres">Str.V.Lupu,61/5</p>
+                        <a class="btn  btn--gray" href="https://goo.gl/maps/hdAQCk7tEmpMwRYR9" target="_blank">adresa pe hartă</a>
+                        <p class="update__date">Numar de telefon:  +373 677 22 112</p>
+
+                        <table class="main__container main__container3" id="first">
+                            <tr class="text__div">
+                                <th>
+                                    <p class="text">Buy</p>
+                                </th>
+                                <th>
+                                    <p class="Currency_text">Currency</p>
+                                </th>
+                                <th>
+                                    <p class="text">Sell</p>
+                                </th>
+                            </tr>
+
+                            <tr class="currencies">
+                                <td>
+                                    <p class="block">00.00<?php echo get_num("vectorap","sucursalanr2","usd","buy");?></p>
+                                </td>
+                                <td><img src="./assets/icons/united-states.png" alt="" class="icon"></td>
+                                <td>
+                                    <p class="block2">00.00<?php echo get_num("vectorap","sucursalanr2","usd","sell");?></p>
+                                </td>
+                            </tr>
+
+                            <tr class="currencies">
+                                <td>
+                                    <p class="block">00.00<?php echo get_num("vectorap","sucursalanr2","eur","buy");?></p>
+                                </td>
+                                <td><img src="./assets/icons/eu-main-flag.png" alt="" class="icon"></td>
+                                <td>
+                                    <p class="block2">00.00<?php echo get_num("vectorap","sucursalanr2","eur","sell");?></p>
+                                </td>
+                            </tr>
+
+                            <tr class="currencies">
+                                <td>
+                                    <p class="block">00.00<?php echo get_num("vectorap","sucursalanr2","rub","buy");?></p>
+                                </td>
+                                <td><img src="./assets/icons/russia-flag.png" alt="" class="icon"></td>
+                                <td>
+                                    <p class="block2">00.00<?php echo get_num("vectorap","sucursalanr2","rub","sell");?></p>
+                                </td>
+                            </tr>
+
+                            <tr class="currencies">
+                                <td>
+                                    <p class="block">00.00<?php echo get_num("vectorap","sucursalanr2","ron","buy");?></p>
+                                </td>
+                                <td><img src="./assets/icons/romania-flag.png" alt="" class="icon"></td>
+                                <td>
+                                    <p class="block2">00.00<?php echo get_num("vectorap","sucursalanr2","ron","sell");?></p>
+                                </td>
+                            </tr>
+
+                            <tr class="currencies">
+                                <td>
+                                    <p class="block">00.00<?php echo get_num("vectorap","sucursalanr2","uah","buy");?></p>
+                                </td>
+                                <td><img src="./assets/icons/ukraine-flag.png" alt="" class="icon"></td>
+                                <td>
+                                    <p class="block2">00.00<?php echo get_num("vectorap","sucursalanr2","uah","sell");?></p>
+                                </td>
+                            </tr>
+
+                            <tr class="currencies">
+                                <td>
+                                    <p class="block">00.00<?php echo get_num("vectorap","sucursalanr2","gbp","buy");?></p>
+                                </td>
+                                <td><img src="./assets/icons/united-kingdom.png" alt="" class="icon"></td>
+                                <td>
+                                    <p class="block2">00.00<?php echo get_num("vectorap","sucursalanr2","gbp","sell");?></p>
+                                </td>
+                            </tr>
+                            <tr class="currencies_button cb3">
+                                <td><a class="btn2 b3 btn--gray">All currencies</a></td>
+                            </tr>
+                        </table>
+                    </div>
+                 </div>
+            </div>
+        </div>
+     </div>
+</div>
+
+<div class="content">
+        <!-- sidebar branches start -->
+        <div class="container">
+
+
+
+        <!-- sidebar branches end -->
+
+        <div id="branch4" class="main-content">
+
+            <div class="curs">
+                <div class="container">
+                    <div class="curs__items">
+
+                        <h1 class="curs__title">Vector Ap:  Sucursala Nr.3</h1>
+                        <p class="adres">Str.Albisoara,80/5 A</p>
+                        <a class="btn  btn--gray" href="https://goo.gl/maps/hdAQCk7tEmpMwRYR9" target="_blank">adresa pe hartă</a>
+                        <p class="update__date">Numar de telefon:  +373 672 89 307</p>
+
+                        <table class="main__container main__container4" id="first">
+                            <tr class="text__div">
+                                <th>
+                                    <p class="text">Buy</p>
+                                </th>
+                                <th>
+                                    <p class="Currency_text">Currency</p>
+                                </th>
+                                <th>
+                                    <p class="text">Sell</p>
+                                </th>
+                            </tr>
+
+                            <tr class="currencies">
+                                <td>
+                                    <p class="block">00.00<?php echo get_num("vectorap","sucursalanr3","usd","buy");?></p>
+                                </td>
+                                <td><img src="./assets/icons/united-states.png" alt="" class="icon"></td>
+                                <td>
+                                    <p class="block2">00.00<?php echo get_num("vectorap","sucursalanr3","usd","sell");?></p>
+                                </td>
+                            </tr>
+
+                            <tr class="currencies">
+                                <td>
+                                    <p class="block">00.00<?php echo get_num("vectorap","sucursalanr3","eur","buy");?></p>
+                                </td>
+                                <td><img src="./assets/icons/eu-main-flag.png" alt="" class="icon"></td>
+                                <td>
+                                    <p class="block2">00.00<?php echo get_num("vectorap","sucursalanr3","eur","sell");?></p>
+                                </td>
+                            </tr>
+
+                            <tr class="currencies">
+                                <td>
+                                    <p class="block">00.00<?php echo get_num("vectorap","sucursalanr3","rub","buy");?></p>
+                                </td>
+                                <td><img src="./assets/icons/russia-flag.png" alt="" class="icon"></td>
+                                <td>
+                                    <p class="block2">00.00<?php echo get_num("vectorap","sucursalanr3","rub","sell");?></p>
+                                </td>
+                            </tr>
+
+                            <tr class="currencies">
+                                <td>
+                                    <p class="block">00.00<?php echo get_num("vectorap","sucursalanr3","ron","buy");?></p>
+                                </td>
+                                <td><img src="./assets/icons/romania-flag.png" alt="" class="icon"></td>
+                                <td>
+                                    <p class="block2">00.00<?php echo get_num("vectorap","sucursalanr3","ron","sell");?></p>
+                                </td>
+                            </tr>
+
+                            <tr class="currencies">
+                                <td>
+                                    <p class="block">00.00<?php echo get_num("vectorap","sucursalanr3","uah","buy");?></p>
+                                </td>
+                                <td><img src="./assets/icons/ukraine-flag.png" alt="" class="icon"></td>
+                                <td>
+                                    <p class="block2">00.00<?php echo get_num("vectorap","sucursalanr3","uah","sell");?></p>
+                                </td>
+                            </tr>
+
+                            <tr class="currencies">
+                                <td>
+                                    <p class="block">00.00<?php echo get_num("vectorap","sucursalanr3","gbp","buy");?></p>
+                                </td>
+                                <td><img src="./assets/icons/united-kingdom.png" alt="" class="icon"></td>
+                                <td>
+                                    <p class="block2">00.00<?php echo get_num("vectorap","sucursalanr3","gbp","sell");?></p>
+                                </td>
+                            </tr>
+                            <tr class="currencies_button cb4">
+                                <td><a class="btn2 b4 btn--gray">All currencies</a></td>
+                            </tr>
+                        </table>
+                    </div>
+                 </div>
+            </div>
+        </div>
+     </div>
+</div>
+
+<div class="content">
+        <!-- sidebar branches start -->
+        <div class="container">
+
+
+
+        <!-- sidebar branches end -->
+
+        <div id="branch5" class="main-content">
+
+            <div class="curs">
+                <div class="container">
+                    <div class="curs__items">
+
+                        <h1 class="curs__title">Vector Ap:  Sucursala Nr.4</h1>
+                        <p class="adres">Or.Durlesti,str.T.Vladimirescu,66</p>
+                        <a class="btn  btn--gray" href="https://goo.gl/maps/hdAQCk7tEmpMwRYR9" target="_blank">adresa pe hartă</a>
+                        <p class="update__date">Numar de telefon:  +373 675 40 231</p>
+
+                        <table class="main__container main__container5" id="first">
+                            <tr class="text__div">
+                                <th>
+                                    <p class="text">Buy</p>
+                                </th>
+                                <th>
+                                    <p class="Currency_text">Currency</p>
+                                </th>
+                                <th>
+                                    <p class="text">Sell</p>
+                                </th>
+                            </tr>
+
+                            <tr class="currencies">
+                                <td>
+                                    <p class="block">00.00<?php echo get_num("vectorap","sucursalanr4","usd","buy");?></p>
+                                </td>
+                                <td><img src="./assets/icons/united-states.png" alt="" class="icon"></td>
+                                <td>
+                                    <p class="block2">00.00<?php echo get_num("vectorap","sucursalanr4","usd","sell");?></p>
+                                </td>
+                            </tr>
+
+                            <tr class="currencies">
+                                <td>
+                                    <p class="block">00.00<?php echo get_num("vectorap","sucursalanr4","eur","buy");?></p>
+                                </td>
+                                <td><img src="./assets/icons/eu-main-flag.png" alt="" class="icon"></td>
+                                <td>
+                                    <p class="block2">00.00<?php echo get_num("vectorap","sucursalanr4","eur","sell");?></p>
+                                </td>
+                            </tr>
+
+                            <tr class="currencies">
+                                <td>
+                                    <p class="block">00.00<?php echo get_num("vectorap","sucursalanr4","rub","buy");?></p>
+                                </td>
+                                <td><img src="./assets/icons/russia-flag.png" alt="" class="icon"></td>
+                                <td>
+                                    <p class="block2">00.00<?php echo get_num("vectorap","sucursalanr4","rub","sell");?></p>
+                                </td>
+                            </tr>
+
+                            <tr class="currencies">
+                                <td>
+                                    <p class="block">00.00<?php echo get_num("vectorap","sucursalanr4","ron","buy");?></p>
+                                </td>
+                                <td><img src="./assets/icons/romania-flag.png" alt="" class="icon"></td>
+                                <td>
+                                    <p class="block2">00.00<?php echo get_num("vectorap","sucursalanr4","ron","sell");?></p>
+                                </td>
+                            </tr>
+
+                            <tr class="currencies">
+                                <td>
+                                    <p class="block">00.00<?php echo get_num("vectorap","sucursalanr4","uah","buy");?></p>
+                                </td>
+                                <td><img src="./assets/icons/united-kingdom.png" alt="" class="icon"></td>
+                                <td>
+                                    <p class="block2">00.00<?php echo get_num("vectorap","sucursalanr4","uah","sell");?></p>
+                                </td>
+                            </tr>
+
+                            <tr class="currencies">
+                                <td>
+                                    <p class="block">00.00<?php echo get_num("vectorap","sucursalanr4","gbp","buy");?></p>
+                                </td>
+                                <td><img src="./assets/icons/united-kingdom.png" alt="" class="icon"></td>
+                                <td>
+                                    <p class="block2">00.00<?php echo get_num("vectorap","sucursalanr4","gbp","sell");?></p>
+                                </td>
+                            </tr>
+                            <tr class="currencies_button cb5">
+                                <td><a class="btn2 b5 btn--gray">All currencies</a></td>
+                            </tr>
+                        </table>
+                    </div>
+                 </div>
+            </div>
+        </div>
+     </div>
+</div>
+
+<div class="content">
+        <!-- sidebar branches start -->
+        <div class="container">
+
+
+
+        <!-- sidebar branches end -->
+
+        <div id="branch6" class="main-content">
+
+            <div class="curs">
+                <div class="container">
+                    <div class="curs__items">
+
+                        <h1 class="curs__title">Vector Ap:  Sucursala Nr.5</h1>
+                        <p class="adres">Bd.Moscova,11/5</p>
+                        <a class="btn  btn--gray" href="https://goo.gl/maps/hdAQCk7tEmpMwRYR9" target="_blank">adresa pe hartă</a>
+                        <p class="update__date">Numar de telefon:  +373 677 11 311</p>
+
+                       <table class="main__container main__container6" id="first">
+                            <tr class="text__div">
+                                <th>
+                                    <p class="text">Buy</p>
+                                </th>
+                                <th>
+                                    <p class="Currency_text">Currency</p>
+                                </th>
+                                <th>
+                                    <p class="text">Sell</p>
+                                </th>
+                            </tr>
+
+                            <tr class="currencies">
+                                <td>
+                                    <p class="block">00.00<?php echo get_num("vectorap","sucursalanr5","usd","buy");?></p>
+                                </td>
+                                <td><img src="./assets/icons/united-states.png" alt="" class="icon"></td>
+                                <td>
+                                    <p class="block2">00.00<?php echo get_num("vectorap","sucursalanr5","usd","sell");?></p>
+                                </td>
+                            </tr>
+
+                            <tr class="currencies">
+                                <td>
+                                    <p class="block">00.00<?php echo get_num("vectorap","sucursalanr5","eur","buy");?></p>
+                                </td>
+                                <td><img src="./assets/icons/eu-main-flag.png" alt="" class="icon"></td>
+                                <td>
+                                    <p class="block2">00.00<?php echo get_num("vectorap","sucursalanr5","eur","sell");?></p>
+                                </td>
+                            </tr>
+
+                            <tr class="currencies">
+                                <td>
+                                    <p class="block">00.00<?php echo get_num("vectorap","sucursalanr5","rub","buy");?></p>
+                                </td>
+                                <td><img src="./assets/icons/russia-flag.png" alt="" class="icon"></td>
+                                <td>
+                                    <p class="block2">00.00<?php echo get_num("vectorap","sucursalanr5","rub","sell");?></p>
+                                </td>
+                            </tr>
+
+                            <tr class="currencies">
+                                <td>
+                                    <p class="block">00.00<?php echo get_num("vectorap","sucursalanr5","ron","buy");?></p>
+                                </td>
+                                <td><img src="./assets/icons/romania-flag.png" alt="" class="icon"></td>
+                                <td>
+                                    <p class="block2">00.00<?php echo get_num("vectorap","sucursalanr5","ron","sell");?></p>
+                                </td>
+                            </tr>
+
+                            <tr class="currencies">
+                                <td>
+                                    <p class="block">00.00<?php echo get_num("vectorap","sucursalanr5","uah","buy");?></p>
+                                </td>
+                                <td><img src="./assets/icons/ukraine-flag.png" alt="" class="icon"></td>
+                                <td>
+                                    <p class="block2">00.00<?php echo get_num("vectorap","sucursalanr5","uah","sell");?></p>
+                                </td>
+                            </tr>
+
+                            <tr class="currencies">
+                                <td>
+                                    <p class="block">00.00<?php echo get_num("vectorap","sucursalanr5","gbp","buy");?></p>
+                                </td>
+                                <td><img src="./assets/icons/united-kingdom.png" alt="" class="icon"></td>
+                                <td>
+                                    <p class="block2">00.00<?php echo get_num("vectorap","sucursalanr5","gbp","sell");?></p>
+                                </td>
+                            </tr>
+                            <tr class="currencies_button cb6">
+                                <td><a class="btn2 b6 btn--gray">All currencies</a></td>
+                            </tr>
+                        </table>
+                    </div>
+                 </div>
+            </div>
+        </div>
+     </div>
+</div>
+
+<div class="content">
+        <!-- sidebar branches start -->
+        <div class="container">
+
+
+
+        <!-- sidebar branches end -->
+
+        <div id="branch7" class="main-content">
+
+            <div class="curs">
+                <div class="container">
+                    <div class="curs__items">
+
+                        <h1 class="curs__title">Vector Ap:  Sucursala Nr.6</h1>
+                        <p class="adres">Str.Codrilor,16</p>
+                        <a class="btn  btn--gray" href="https://goo.gl/maps/hdAQCk7tEmpMwRYR9" target="_blank">adresa pe hartă</a>
+                        <p class="update__date">Numar de telefon:  +373 672 89 305</p>
+
+                        <table class="main__container main__container7" id="first">
+                            <tr class="text__div">
+                                <th>
+                                    <p class="text">Buy</p>
+                                </th>
+                                <th>
+                                    <p class="Currency_text">Currency</p>
+                                </th>
+                                <th>
+                                    <p class="text">Sell</p>
+                                </th>
+                            </tr>
+
+                            <tr class="currencies">
+                                <td>
+                                    <p class="block">00.00<?php echo get_num("vectorap","sucursalanr6","usd","buy");?></p>
+                                </td>
+                                <td><img src="./assets/icons/united-states.png" alt="" class="icon"></td>
+                                <td>
+                                    <p class="block2">00.00<?php echo get_num("vectorap","sucursalanr6","usd","sell");?></p>
+                                </td>
+                            </tr>
+
+                            <tr class="currencies">
+                                <td>
+                                    <p class="block">00.00<?php echo get_num("vectorap","sucursalanr6","eur","buy");?></p>
+                                </td>
+                                <td><img src="./assets/icons/eu-main-flag.png" alt="" class="icon"></td>
+                                <td>
+                                    <p class="block2">00.00<?php echo get_num("vectorap","sucursalanr6","eur","sell");?></p>
+                                </td>
+                            </tr>
+
+                            <tr class="currencies">
+                                <td>
+                                    <p class="block">00.00<?php echo get_num("vectorap","sucursalanr6","rub","buy");?></p>
+                                </td>
+                                <td><img src="./assets/icons/russia-flag.png" alt="" class="icon"></td>
+                                <td>
+                                    <p class="block2">00.00<?php echo get_num("vectorap","sucursalanr6","rub","sell");?></p>
+                                </td>
+                            </tr>
+
+                            <tr class="currencies">
+                                <td>
+                                    <p class="block">00.00<?php echo get_num("vectorap","sucursalanr6","ron","buy");?></p>
+                                </td>
+                                <td><img src="./assets/icons/romania-flag.png" alt="" class="icon"></td>
+                                <td>
+                                    <p class="block2">00.00<?php echo get_num("vectorap","sucursalanr6","ron","sell");?></p>
+                                </td>
+                            </tr>
+
+                            <tr class="currencies">
+                                <td>
+                                    <p class="block">00.00<?php echo get_num("vectorap","sucursalanr6","uah","buy");?></p>
+                                </td>
+                                <td><img src="./assets/icons/ukraine-flag.png" alt="" class="icon"></td>
+                                <td>
+                                    <p class="block2">00.00<?php echo get_num("vectorap","sucursalanr6","uah","sell");?></p>
+                                </td>
+                            </tr>
+
+                            <tr class="currencies">
+                                <td>
+                                    <p class="block">00.00<?php echo get_num("vectorap","sucursalanr6","gbp","buy");?></p>
+                                </td>
+                                <td><img src="./assets/icons/united-kingdom.png" alt="" class="icon"></td>
+                                <td>
+                                    <p class="block2">00.00<?php echo get_num("vectorap","sucursalanr6","gbp","sell");?></p>
+                                </td>
+                            </tr>
+                            <tr class="currencies_button cb7">
+                                <td><a class="btn2 b7 btn--gray">All currencies</a></td>
+                            </tr>
+                        </table>
+                    </div>
+                 </div>
+            </div>
+        </div>
+     </div>
+</div>
+
+
+
+<div class = "contacts">
+    <div class="container">
+        <div class="contact__items">
+           <h1 class = "contacts__title">Сontacts</h1>
+           <div class="flex_box">
+           <div class="contacts_block">
+               <p class = "manager_title">Managers phone numbers</p>
+               <p class="manager_number">+37345678901</p>
+               <p class="manager_number">+37345678901</p>
+           </div>
+           <div class="contacts_block">
+                <p class = "manager_title">Our social networks</p>
+                <div class="social">
+                <a href="" class="social__item">
+                    <img src="./assets/icons/telegram.svg" alt="" height="25" class="social__img">
+                </a>
+                <a href="" class="social__item">
+                    <img src="./assets/icons/facebook.svg" height="25" alt="" class="social__img">
+                </a>
+                </div>
+
+           </div>
+
+           </div>
+
+
+
+        </div>
+    </div>
+</div>
+
+
+<script src="app.js"></script>
+<!--<script src = "./newScript.js"></script>-->
+</body>
+
+</html>

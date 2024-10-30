@@ -1,2 +1,2 @@
 # My_first_WebSite-Axemol-
-I created this web site for my family buisness when i was 16 
+I created this website for my family business when I was 16.
